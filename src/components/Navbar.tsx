@@ -25,7 +25,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-const Links = ["Posts", "", ""];
+const Links = ["Posts"];
 
 const NavLink = (props: Props) => {
   const { children } = props;
@@ -56,6 +56,7 @@ const NavBar = () => {
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
             size={"md"}
+            as={Flex}
             icon={isOpen ? <CgClose /> : <GiHamburgerMenu />}
             aria-label={"Open Menu"}
             display={{ md: "none" }}
@@ -80,23 +81,6 @@ const NavBar = () => {
               ))}
             </HStack>
           </HStack>
-          <Flex alignItems={"center"}>
-            <Menu>
-              <MenuButton
-                as={Button}
-                rounded={"full"}
-                variant={"link"}
-                cursor={"pointer"}
-                minW={0}
-              ></MenuButton>
-              <MenuList>
-                <MenuItem>Link 1</MenuItem>
-                <MenuItem>Link 2</MenuItem>
-                <MenuDivider />
-                <MenuItem>Link 3</MenuItem>
-              </MenuList>
-            </Menu>
-          </Flex>
         </Flex>
 
         {isOpen ? (

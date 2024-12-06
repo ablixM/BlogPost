@@ -5,7 +5,7 @@ export interface FetchResponse<T> {
 }
 
 const axiosInstance = axios.create({
-  baseURL: "http://192.168.100.147:5400",
+  baseURL: "http://localhost:5400",
 });
 
 export class APIClient<T> {
