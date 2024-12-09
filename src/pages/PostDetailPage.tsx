@@ -17,7 +17,7 @@ import {
   Button,
   Icon,
 } from "@chakra-ui/react";
-import ExpandableText from "../components/ExpandableText";
+
 import { Link, useNavigate } from "react-router-dom";
 import { IoArrowBack } from "react-icons/io5";
 
@@ -130,7 +130,7 @@ function PostDetailPage() {
             className="prose"
             maxW="100%"
           >
-            <ExpandableText>{post.description}</ExpandableText>
+            <Text>{post.description}</Text>
           </Box>
         </article>
       ))}
