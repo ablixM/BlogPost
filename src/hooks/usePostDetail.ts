@@ -1,13 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
-import { Post } from "../entities/post";
+import { DetailPost } from "../entities/detailPost";
 import { APIClient } from "../api-client";
 
-const apiClient = new APIClient<Post>("/posts");
+const apiClient = new APIClient<DetailPost>("/posts");
 
-const usePostDetail = (title: string) =>
+const usePostDetail = (id: string) =>
   useQuery({
-    queryKey: ["posts", title],
-    queryFn: () => apiClient.get(title),
+    queryKey: ["posts", id],
+    queryFn: () => apiClient.get(id),
   });
 
 export default usePostDetail;
